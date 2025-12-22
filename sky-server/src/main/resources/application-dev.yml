@@ -7,3 +7,9 @@ sky:
     username: root
     password: 1
 
+  alioss:
+    bucket-name: bigevent1234567890
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-secret: k2brldjAtHJ5U0yFi2p8aPip8QYTt8
+    access-key-id: LTAI5tHmTgQJkqBv5sKv7jax
+

@@ -8,6 +8,7 @@ import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
 import com.sky.entity.DishFlavor;
+import com.sky.exception.DeletionNotAllowedException;
 import com.sky.mapper.DishFlavorMapper;
 import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
@@ -61,7 +62,7 @@ public class DishServiceImpl implements DishService {
         for (Long id : ids) {
             Dish dish = dishMapper.getById(id);
             if (dish.getStatus().equals(StatusConstant.ENABLE)) {
-                throw new RuntimeException("起售中的菜品不能删除");
+                throw new DeletionNotAllowedException(MessageConstant.DISH_ON_SALE);
             }
         }
         List<Long> setmealIds = setmealDishMapper.getSetmealIdsByDishIds(ids);
@@ -71,8 +72,6 @@ public class DishServiceImpl implements DishService {
         for (Long id : ids) {
             dishMapper.deleteById(id);
             dishFlavorMapper.deleteByDishId(id);
-
         }
-
     }
 }
