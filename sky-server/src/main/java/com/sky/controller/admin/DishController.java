@@ -62,5 +62,5 @@ public class DishController {
         log.info("修改菜品：{}", dishDTO);
         dishService.update(dishDTO);
         return Result.success();
-    }//1111111111111111111111111111111111111111111111111111111111111111111111111111111111
+    }
 }
