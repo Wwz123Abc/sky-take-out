@@ -44,7 +44,6 @@ public class DishController {
         dishService.delete(ids);
         return Result.success();
     }
-
     @ApiOperation("根据id查询菜品")
     @GetMapping("/{id}")
     public Result<DishVO> getById(@PathVariable Long id) {
