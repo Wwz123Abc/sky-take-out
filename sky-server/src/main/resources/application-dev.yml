@@ -13,3 +13,9 @@ sky:
     access-key-secret: k2brldjAtHJ5U0yFi2p8aPip8QYTt8
     access-key-id: LTAI5tHmTgQJkqBv5sKv7jax
 
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 0
+
