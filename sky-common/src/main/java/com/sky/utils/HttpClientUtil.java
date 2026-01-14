@@ -150,7 +150,6 @@ public class HttpClientUtil {
                 entity.setContentType("application/json");
                 httpPost.setEntity(entity);
             }
-
             httpPost.setConfig(builderRequestConfig());
 
             // 执行http请求
