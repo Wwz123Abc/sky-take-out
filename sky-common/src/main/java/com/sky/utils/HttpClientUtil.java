@@ -166,7 +166,6 @@ public class HttpClientUtil {
                 e.printStackTrace();
             }
         }
-
         return resultString;
     }
     private static RequestConfig builderRequestConfig() {
